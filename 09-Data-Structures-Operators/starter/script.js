@@ -45,3 +45,12 @@ const restaurant = {
     },
   },
 };
+
+const arr = ['Kabul', 'Bamyan', 'Herat'];
+// const [a, b, c] = arr;
+// console.log(a, b, c);
+
+const {
+  openingHours: { thu },
+} = restaurant;
+console.log(thu);
