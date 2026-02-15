@@ -29,7 +29,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
+  order: function () {
+    console.log(this.name);
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -46,11 +48,32 @@ const restaurant = {
   },
 };
 
-const arr = ['Kabul', 'Bamyan', 'Herat'];
+const arr = ['Kabul', 'Bamyan', 'Bamyan', 'Herat'];
 // const [a, b, c] = arr;
 // console.log(a, b, c);
 
-const {
-  openingHours: { thu },
-} = restaurant;
-console.log(thu);
+// const mySet = new Set(...arr);
+// mySet.add('Mazar');
+// console.log(mySet);
+// We create a class for each node within the stack
+
+// console.log(String.fromCharCode(66));
+
+//search a string in a string
+// console.log(flights.includes('_delayed_departure'));
+
+//slice method
+console.log(flights.slice(0, 10));
+let sentence = 'Learning JavaScript is fun!';
+let extracted = sentence.slice(9, -5);
+
+console.log(extracted);
+let str = 'JavaScript';
+let objStr = new String('JavaScript');
+console.log(str.length === objStr.length);
+
+const binary = 9;
+console.log(binary.toString(16));
+
+const fruit = new Set(['Apple', 'Banana', 'Berreis']);
+console.log(fruit.toString());
