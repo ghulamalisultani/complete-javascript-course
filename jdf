@@ -1,0 +1,83 @@
+[33mcommit a79398b2dbf2b68505b1c8429d4e3308521b9dda[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Ghulam Ali Sultani <ghulamalimohtaj@gmail.com>
+Date:   Sun Feb 15 10:57:59 2026 +0430
+
+    learning data structure in javascript
+
+[33mcommit a042adaa3af6a5db772c782b687f349c915cc250[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ghulam Ali Sultani <ghulamalimohtaj@gmail.com>
+Date:   Fri Feb 13 15:54:21 2026 +0430
+
+    object desctruturing learned
+
+[33mcommit 76b8b79b2994dd00298b2be105aa6bc721e40a22[m[33m ([m[1;31mupstream/master[m[33m, [m[1;31mupstream/HEAD[m[33m)[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Tue Dec 10 11:37:57 2024 +0000
+
+    v2.3 (forkify API url)
+
+[33mcommit 0156ffd2f7a6cbc6cfb01d1613af6180af6932aa[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Fri Nov 22 12:15:11 2024 +0000
+
+    v2.3 (new lectures)
+
+[33mcommit 6d371550318ce01a839db6148ed40bb2ff1377ce[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Mon Nov 18 16:55:44 2024 +0000
+
+    v2.3 (bugfixes)
+
+[33mcommit 8201b01f2fcd274fb276c1c8e11e55847c6d451e[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Mon Feb 7 08:18:41 2022 +0000
+
+    Updated readme
+
+[33mcommit 4a64f00ae930c9fe4c0af7b20ae6af6cf95d5acb[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Thu Nov 11 14:12:17 2021 +0000
+
+    v2.2
+
+[33mcommit 0a217ff24696034937dcc0a7a19f57c4735bc289[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Wed Jan 27 12:42:58 2021 +0000
+
+    New FAQs
+
+[33mcommit fe6ec3571770bbc71cfc8796aaa5056c4a4b8e1e[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Wed Jan 27 12:41:11 2021 +0000
+
+    New FAQs
+
+[33mcommit d817e0e3467ce47181e8504c535dad46e61fed4e[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Fri Jan 22 19:34:09 2021 +0000
+
+    v2.1
+
+[33mcommit 9f1ffbc59cf723851fb7210b8e237bf39ee69470[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Tue Jan 19 15:09:53 2021 +0000
+
+    Fixed some small bugs
+
+[33mcommit 838e45087162dbf41db5975c335639a9a1879829[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Tue Oct 27 15:31:54 2020 +0000
+
+    Fixed small error in forkify starter
+
+[33mcommit ff8ce81ae97be7093e4e9c5ae19f4c729fd3950a[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Sat Oct 24 14:25:42 2020 +0100
+
+    Updated FAQs
+
+[33mcommit 5ee088688f56770db1f1fa6285bb5b57d1cc6c5d[m
+Author: Jonas Schmedtmann <hello@jonas.io>
+Date:   Mon Oct 19 12:27:38 2020 +0100
+
+    First commit 🚀

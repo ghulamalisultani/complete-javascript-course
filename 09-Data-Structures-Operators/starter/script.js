@@ -77,3 +77,35 @@ console.log(binary.toString(16));
 
 const fruit = new Set(['Apple', 'Banana', 'Berreis']);
 console.log(fruit.toString());
+
+const person = {
+  name: 'John',
+  age: 30,
+  children: {
+    first: 'Hamid',
+    second: 'Ahmad',
+  },
+  isStudent: true,
+};
+
+console.log(JSON.stringify(person));
+
+const calcAge = dob => {
+  return 2026 - dob;
+};
+console.log(calcAge(1999));
+
+//Global variable vs function scopped variable
+let x = 10;
+
+function printX() {
+  let x = 20;
+  console.log(x);
+}
+
+printX();
+console.log(x);
+if (true) {
+  let blockVar = 'Hello';
+}
+console.log(blockVar);
