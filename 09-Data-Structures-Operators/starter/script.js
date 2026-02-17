@@ -63,49 +63,55 @@ const arr = ['Kabul', 'Bamyan', 'Bamyan', 'Herat'];
 // console.log(flights.includes('_delayed_departure'));
 
 //slice method
-console.log(flights.slice(0, 10));
-let sentence = 'Learning JavaScript is fun!';
-let extracted = sentence.slice(9, -5);
+// console.log(flights.slice(0, 10));
+// let sentence = 'Learning JavaScript is fun!';
+// let extracted = sentence.slice(9, -5);
 
-console.log(extracted);
-let str = 'JavaScript';
-let objStr = new String('JavaScript');
-console.log(str.length === objStr.length);
+// console.log(extracted);
+// let str = 'JavaScript';
+// let objStr = new String('JavaScript');
+// console.log(str.length === objStr.length);
 
-const binary = 9;
-console.log(binary.toString(16));
+// const binary = 9;
+// console.log(binary.toString(16));
 
-const fruit = new Set(['Apple', 'Banana', 'Berreis']);
-console.log(fruit.toString());
+// const fruit = new Set(['Apple', 'Banana', 'Berreis']);
+// console.log(fruit.toString());
 
-const person = {
-  name: 'John',
-  age: 30,
-  children: {
-    first: 'Hamid',
-    second: 'Ahmad',
-  },
-  isStudent: true,
-};
+// const person = {
+//   name: 'John',
+//   age: 30,
+//   children: {
+//     first: 'Hamid',
+//     second: 'Ahmad',
+//   },
+//   isStudent: true,
+// };
 
-console.log(JSON.stringify(person));
+// console.log(JSON.stringify(person));
 
-const calcAge = dob => {
-  return 2026 - dob;
-};
-console.log(calcAge(1999));
+// const calcAge = dob => {
+//   return 2026 - dob;
+// };
+// console.log(calcAge(1999));
 
-//Global variable vs function scopped variable
-let x = 10;
+// //Global variable vs function scopped variable
+// let x = 10;
 
-function printX() {
-  let x = 20;
-  console.log(x);
-}
+// function printX() {
+//   let x = 20;
+//   console.log(x);
+// }
 
-printX();
-console.log(x);
-if (true) {
-  let blockVar = 'Hello';
-}
-console.log(blockVar);
+// printX();
+// console.log(x);
+// if (true) {
+//   let blockVar = 'Hello';
+// }
+// console.log(blockVar);
+
+// console.log(3 / 0);
+// console.log(Math.floor(Math.random() * 10));
+
+// const array = ['hello', 'world'];
+// console.log(array.toString());
