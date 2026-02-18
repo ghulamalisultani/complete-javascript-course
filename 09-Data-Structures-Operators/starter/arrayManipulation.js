@@ -56,3 +56,11 @@ function showLunchMenu(lunches) {
   console.log('Menu items: ' + lunches.join(', '));
 }
 showLunchMenu(lunches);
+
+const colors = ['red', 'blue', 'green', 'yellow'];
+colors.splice(1, 2, 'purple');
+console.log(colors);
+
+const arr = ['apple', 'banana', 'cherry', 'date'];
+const slicedArr = arr.slice(1, 3);
+console.log(slicedArr);
