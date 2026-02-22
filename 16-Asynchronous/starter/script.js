@@ -34,4 +34,23 @@ const getCountryInfo = function (country) {
       console.log(data);
     });
 };
-getCountryInfo('Canada');
+// getCountryInfo('Canada');
+
+// Welcome to my coding challange
+/*
+In this challange, I am gonna write a program that will find out
+where I am. I am tasked to used my device's GPS to coordinate my location
+and use the coordinate to find the country.
+Let's go 😉
+*/
+function whereAmI() {
+  navigator.geolocation.getCurrentPosition(position => {
+    fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
+    )
+      .then(response => response.json())
+      .then(data => console.log(data.countryName));
+  });
+}
+whereAmI();
+//Wow! I did it 🏆🎉💪
