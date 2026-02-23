@@ -43,21 +43,21 @@ where I am. I am tasked to used my device's GPS to coordinate my location
 and use the coordinate to find the country.
 Let's go 😉
 */
-function whereAmI() {
-  navigator.geolocation.getCurrentPosition(position => {
-    fetch(
-      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
-    )
-      .then(response => {
-        if (response.ok) {
-          throw new Error('Something went wrong!!!');
-        }
-        response.json();
-      })
-      .then(data => console.log(data.countryName))
-      .catch(err => console.error(err.message));
-  });
-}
+// function whereAmI() {
+//   navigator.geolocation.getCurrentPosition(position => {
+//     fetch(
+//       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
+//     )
+//       .then(response => {
+//         if (response.ok) {
+//           throw new Error('Something went wrong!!!');
+//         }
+//         response.json();
+//       })
+//       .then(data => console.log(data.countryName))
+//       .catch(err => console.error(err.message));
+//   });
+// }
 // whereAmI();
 //Wow! I did it 🏆🎉💪
 
@@ -105,3 +105,46 @@ createImage('img/img-1.jpg')
   .then(img => console.log('image 2 loaded'))
   .catch(err => console.error(err.message));
 //wow! I did it 😉
+
+//using async await
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async function () {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geocoding
+    const resGeo = await fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
+    );
+    if (!resGeo.ok) throw new Error('Problem getting location data');
+
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo);
+
+    // Country data
+    const res = await fetch(
+      `https://restcountries.com/v2/name/${dataGeo.countryCode}`,
+    );
+
+    // BUG in video:
+    // if (!resGeo.ok) throw new Error('Problem getting country');
+
+    // FIX:
+    if (!res.ok) throw new Error('Problem getting country');
+
+    const data = await res.json();
+    console.log(data);
+    renderCountry(data[0]);
+  } catch (err) {
+    console.error(`${err} 💥`);
+    renderError(`💥 ${err.message}`);
+  }
+};
+whereAmI();
