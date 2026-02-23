@@ -48,9 +48,60 @@ function whereAmI() {
     fetch(
       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
     )
-      .then(response => response.json())
-      .then(data => console.log(data.countryName));
+      .then(response => {
+        if (response.ok) {
+          throw new Error('Something went wrong!!!');
+        }
+        response.json();
+      })
+      .then(data => console.log(data.countryName))
+      .catch(err => console.error(err.message));
   });
 }
-whereAmI();
+// whereAmI();
 //Wow! I did it 🏆🎉💪
+
+// let's go for the next CHALLANGE
+
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+let img;
+const createImage = function (path) {
+  const images = document.querySelector('.images');
+  return new Promise((res, rej) => {
+    img = document.createElement('img');
+    img.src = path;
+    img.onload = () => {
+      images.append(img);
+      res(img);
+    };
+    img.onerror = () => {
+      rej(new Error('Image not found!'));
+    };
+  });
+};
+
+createImage('img/img-1.jpg')
+  .then(res => {
+    console.log('Image 1 loaded');
+    return wait(2);
+  })
+  .then(function () {
+    img.style.display = 'none';
+    return wait(2);
+  })
+  .then(function () {
+    return createImage('img/img-2.jpg');
+  })
+  .then(function () {
+    return wait(2);
+  })
+  .then(function () {
+    img.style.display = 'none';
+  })
+  .then(img => console.log('image 2 loaded'))
+  .catch(err => console.error(err.message));
+//wow! I did it 😉
