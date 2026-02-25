@@ -84,26 +84,26 @@ const createImage = function (path) {
   });
 };
 
-createImage('img/img-1.jpg')
-  .then(res => {
-    console.log('Image 1 loaded');
-    return wait(2);
-  })
-  .then(function () {
-    img.style.display = 'none';
-    return wait(2);
-  })
-  .then(function () {
-    return createImage('img/img-2.jpg');
-  })
-  .then(function () {
-    return wait(2);
-  })
-  .then(function () {
-    img.style.display = 'none';
-  })
-  .then(img => console.log('image 2 loaded'))
-  .catch(err => console.error(err.message));
+// createImage('img/img-1.jpg')
+//   .then(res => {
+//     console.log('Image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(function () {
+//     img.style.display = 'none';
+//     return wait(2);
+//   })
+//   .then(function () {
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then(function () {
+//     return wait(2);
+//   })
+//   .then(function () {
+//     img.style.display = 'none';
+//   })
+//   .then(img => console.log('image 2 loaded'))
+//   .catch(err => console.error(err.message));
 //wow! I did it 😉
 
 //using async await
@@ -147,4 +147,13 @@ const whereAmI = async function () {
     renderError(`💥 ${err.message}`);
   }
 };
-whereAmI();
+// whereAmI();
+
+//CHALLANGE #3
+const loadAll = function (imagePaths) {
+  const loadedImages = imagePaths.map(imagePath => createImage(imagePath));
+  console.log(Promise.all(loadedImages));
+  // console.log(loadedImages);
+};
+
+loadAll(['img/img-1.jpg', 'img/img-2.jpg']);
